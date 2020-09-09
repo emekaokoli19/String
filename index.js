@@ -1,5 +1,5 @@
 
-var sentence = "mallam madam"
+var sentence = "maDam aYO Who Stays In oYo Was in a Bus to Lagos whEn Her Son Sold the rAceCar"
 
 //function reverses letter cases of sentences
 case_reverse = () => {
