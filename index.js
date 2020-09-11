@@ -1,26 +1,28 @@
 
-var sentence = "maDam aYO Who Stays In oYo Was in a Bus to Lagos whEn Her Son Sold the rAceCar"
+var sent_ence = "maDam aYO Who Stays In oYo Was in a Bus to Lagos whEn Her Son Sold the rAceCar"
+sentence = sent_ence.split(" ")
+console.log(sentence)
 
 //function reverses letter cases of sentences
 case_reverse = () => {
 
     var indices = []
-    sentence = sentence.split("")
-    for(i=0; i<sentence.length; i++){
-        if(sentence[i] == sentence[i].toUpperCase()){
+    sent_ence = sent_ence.split("")
+    for(i=0; i<sent_ence.length; i++){
+        if(sent_ence[i] == sent_ence[i].toUpperCase()){
             indices.push(i)
-            sentence[i] = sentence[i].toLowerCase()
+            sent_ence[i] = sent_ence[i].toLowerCase()
         }
     }
     
-    for(i=0; i<sentence.length; i++){
+    for(i=0; i<sent_ence.length; i++){
         if(indices.includes(i) == false){
-            sentence[i] = sentence[i].toUpperCase()
+            sent_ence[i] = sent_ence[i].toUpperCase()
         }
     }
-    sentence = sentence.join("")
-    sentence = sentence.split(" ")
-    console.log(sentence)
+    sent_ence = sent_ence.join("")
+    sent_ence = sent_ence.split(" ")
+    console.log(sent_ence)
 }
 
 
@@ -28,7 +30,6 @@ case_reverse = () => {
 end_ing = () => {
 
     ing_words = []
-    sentence = sentence.split(" ")
     for(i=0; i<sentence.length; i++){
         sentence[i] = sentence[i].toLowerCase()
         if(sentence[i].charAt(sentence[i].length - 3) == "i" && 
@@ -43,11 +44,11 @@ end_ing = () => {
 
 //function checks for palidromes in sentence
 palindrome_checker = () => {
-    sentence = sentence.toLowerCase()
-    sentence = sentence.split(" ")
+
     palindrome_word = ""
     palindrome = []
     for(i=0; i<sentence.length; i++){
+        sentence[i] = sentence[i].toLowerCase()
         if(sentence[i].length % 2 == 0){
             for(j=0; j<sentence[i].length; j++){
                 if(sentence[i][j] == sentence[i].charAt(sentence[i].length - (j + 1))){
@@ -82,4 +83,4 @@ result = {
     palindromeWords:palindrome_checker()
 }
 
-console.log(result)
+const answer = {}
